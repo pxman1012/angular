@@ -1,4 +1,4 @@
-<h2>My Heroes</h2>
+<h2>Best Players</h2>
 
 <ul class="players">
   <li *ngFor="let player of players"
@@ -8,4 +8,5 @@
   </li>
 </ul>
 
+<app-player-detail [player]="selectedPlayer"></app-player-detail>
 <app-player-detail [player]="selectedPlayer"></app-player-detail>
