@@ -17,9 +17,19 @@ export class PlayerService {
   getPlayers(): Observable<Player[]> {
 
     // send message after fetching players
+
     this.messageService.add('PlayerService: fetched players');
-    
+
     return of(PLAYERS);
+  }
+
+  // tslint:disable-next-line:typedef
+  getPlayer(id: number) {
+    // TODO: send the message _after_ fetching the player
+
+    this.messageService.add('PlayerService: fetched player id=${id}');
+
+    return of(PLAYERS.find(p => p.id === id));
   }
 
 }

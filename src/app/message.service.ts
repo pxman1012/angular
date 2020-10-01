@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MessageService {
-  message: string[] = [];
+  message: string[] = ['Welcome to super star room','We are legends'];
 
   // tslint:disable-next-line:typedef
   add(message: string) {

@@ -9,13 +9,14 @@ import { MessageService } from '../message.service';
   styleUrls: ['./players.component.css']
 })
 export class PlayersComponent implements OnInit {
- 
+
   selectedPlayer: Player;
 
-  players : Player[];
+  players: Player[];
 
   constructor(private playerService: PlayerService, private messageService: MessageService) { }
 
+  // tslint:disable-next-line:typedef
   ngOnInit() {
     this.getPlayers();
   }
@@ -27,7 +28,7 @@ export class PlayersComponent implements OnInit {
 
   getPlayers(): void {
     this.playerService.getPlayers()
-        .subscribe(players => this.players = players);
+      .subscribe(players => this.players = players);
   }
 
 }

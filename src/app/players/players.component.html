@@ -1,12 +1,17 @@
 <h2>Best Players</h2>
 
 <ul class="players">
-  <li *ngFor="let player of players"
-    [class.selected]="player === selectedHero"
-    (click)="onSelect(player)">
-    <span class="badge">{{player.id}}</span> {{player.name}}
+  <li *ngFor="let p of players">
+    <a routerLink='detail/{{p.id}}'>
+      <span class="badge">{{p.id}}</span> {{p.name}}
+    </a>
   </li>
-</ul>
 
-<app-player-detail [player]="selectedPlayer"></app-player-detail>
-<app-player-detail [player]="selectedPlayer"></app-player-detail>
+  <!-- <h1>Test+</h1>
+  <li *ngFor="let p of players">
+    <m *ngIf="p.name == 'Neymar Jr'|| p.id == 5">
+      <span class="badge">{{p.id}}</span>{{p.name}}
+    </m>
+
+  </li> -->
+</ul>
